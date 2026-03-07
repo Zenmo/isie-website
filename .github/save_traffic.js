@@ -58,7 +58,8 @@ async function saveTraffic() {
     clones: combinedClones,
   };
 
-  if (!fs.existsSync("./.github/data")) fs.mkdirSync("./.github/data", { recursive: true });
+  if (!fs.existsSync("./.github/data"))
+    fs.mkdirSync("./.github/data", { recursive: true });
   fs.writeFileSync(filePath, JSON.stringify(finalData, null, 2));
 
   console.log(
