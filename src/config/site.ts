@@ -1,7 +1,7 @@
 import ogImage from "@/assets/og-image.png";
 
 export const siteConfig = {
-  name: "Astro Starter Pro",
+  name: "ISIE",
   description:
     "Starter template optimized for SEO and performance. A solid foundation to start your projects with best practices.",
   url: "https://astrostarterpro.com",
@@ -17,10 +17,11 @@ export const siteConfig = {
   },
   navLinks: [
     { text: "Home", href: "/" },
-    { text: "About", href: "/about" },
-    { text: "Services", href: "/services" },
-    { text: "Blog", href: "/blog" },
+    { text: "Over het project", href: "/over-het-project" },
+    { text: "Aanpak", href: "/aanpak" },
+    { text: "Instrumentarium", href: "/instrumentarium" },
+    { text: "Publicaties", href: "/publicaties" },
+    { text: "Consortium", href: "/consortium" },
     { text: "Contact", href: "/contact" },
-    { text: "Widgets", href: "/widgets" },
   ],
 };
