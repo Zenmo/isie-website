@@ -21,3 +21,6 @@ FROM lipanski/docker-static-website:latest
 # Copy built site from builder stage
 # Astro by default builds to the 'dist' folder
 COPY --from=builder /app/dist .
+COPY deploy/httpd.conf ./
+
+CMD ["/busybox-httpd", "-f", "-v", "-p", "3000", "-c", "httpd.conf"]
