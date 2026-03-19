@@ -1,0 +1,64 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Features from "@/components/widgets/Features.astro";
+import Content from "@/components/widgets/Content.astro";
+import Form from "@/components/ui/Form.astro";
+
+const metadata = {
+  title: "Consortium",
+  description: "Deze zes organisaties werken samen aan integratie.",
+};
+---
+
+<BaseLayout {metadata}>
+  <Content title="Consortium" description={metadata.description} />
+  <style>
+    .logos {
+      --item-width: 20rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3.5rem;
+      flex-wrap: wrap;
+      max-width: calc(3 * var(--item-width) + 2 * 4rem);
+    }
+    .logos > * {
+      width: var(--item-width);
+      height: 12rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <div
+    style="display: flex; justify-content: center; align-items: center; padding-left: 5rem; padding-right: 5rem;"
+  >
+    <div class="logos">
+      <a href="https://commonfutures.nl/" target="_blank">
+        <img src="/consortium-logos/common-futures.svg" alt="Common Futures" />
+      </a>
+      <a href="https://www.ce-delft.nl/" target="_blank">
+        <img src="/consortium-logos/ce-delft.png" alt="CE Delft" />
+      </a>
+      <a href="https://openenergytransition.org/" target="_blank">
+        <img
+          src="/consortium-logos/open-energy-transition.png"
+          alt="Open Energy Transition"
+        />
+      </a>
+      <a href="https://resourcefully.nl/" target="_blank">
+        <img
+          src="/consortium-logos/resourcefully-light-mode.svg"
+          alt="Resourcefully"
+        />
+      </a>
+      <a href="https://zenmo.com" target="_blank">
+        <img src="/consortium-logos/zenmo.png" alt="Zenmo" />
+      </a>
+      <a href="https://www.tue.nl/" target="_blank">
+        <img src="/consortium-logos/tue.svg" alt="TU Eindhoven" />
+      </a>
+    </div>
+  </div>
+</BaseLayout>
