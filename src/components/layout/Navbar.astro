@@ -4,7 +4,7 @@ import ThemeToggle from "@/components/ui/ThemeToggle.astro";
 ---
 
 <nav
-  class="fixed top-0 z-50 w-full border-b border-border bg-background md:bg-background/50 md:backdrop-blur"
+  class="fixed top-0 z-50 w-full bg-background md:bg-background/50 md:backdrop-blur"
 >
   <div
     class="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 sm:px-6 lg:px-8"
@@ -107,6 +107,17 @@ import ThemeToggle from "@/components/ui/ThemeToggle.astro";
       >
     </div>
   </div>
+  <hr
+    style="
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--color-primary);
+      /*box-shadow: 0 0 1px 1px var(--color-primary);*/
+      border-top-width: 0;
+      height: 4px;
+      width: 80vw;
+  "
+  />
 </nav>
 
 <script>
