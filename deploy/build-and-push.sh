@@ -3,12 +3,17 @@
 # Exit on error
 set -e
 
+cd $(dirname "$0")
+
 # Image name
 IMAGE_NAME="ghcr.io/zenmo/isie-website:latest"
 
 # Build the Docker image
 echo "Building Docker image: $IMAGE_NAME..."
-docker build -t "$IMAGE_NAME" .
+docker build \
+    --file Dockerfile \
+    --tag "$IMAGE_NAME" \
+    ..
 
 # Push the Docker image
 echo "Pushing Docker image: $IMAGE_NAME..."
