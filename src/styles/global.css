@@ -24,6 +24,8 @@
   --muted: #f4f4f5;
   --muted-foreground: #52525b;
   --card: #ffffff;
+
+  font-family: "Arial Nova", sans-serif;
 }
 
 :root[data-theme="dark"] {

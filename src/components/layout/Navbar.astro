@@ -25,7 +25,8 @@ import ThemeToggle from "@/components/ui/ThemeToggle.astro";
           siteConfig.navLinks.map((link) => (
             <a
               href={link.href}
-              class="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              class="text-sm font-bold text-foreground transition-colors hover:text-primary h-16"
+              style="display: flex; align-items: center; justify-content: center;"
             >
               {link.text}
             </a>

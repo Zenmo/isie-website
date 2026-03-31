@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Arial Nova";
+  src:
+    local("Arial Nova"),
+    local("ArialNova"),
+    url("/fonts/arial-nova/ArialNova.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Nova";
+  src:
+    local("Arial Nova Bold"),
+    local("ArialNova-Bold"),
+    url("/fonts/arial-nova/ArialNova-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Nova";
+  src:
+    local("Arial Nova Light"),
+    local("ArialNova-Light"),
+    url("/fonts/arial-nova/ArialNova-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Nova";
+  src:
+    local("Arial Nova Bold Italic"),
+    local("ArialNova-BoldItalic"),
+    url("/fonts/arial-nova/ArialNova-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial Nova";
+  src:
+    local("Arial Nova Light Italic"),
+    local("ArialNova-LightItalic"),
+    url("/fonts/arial-nova/ArialNova-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial Nova Cond";
+  src:
+    local("Arial Nova Cond Italic"),
+    local("ArialNovaCond-Italic"),
+    url("/fonts/arial-nova/ArialNovaCond-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial Nova Cond";
+  src:
+    local("Arial Nova Cond Light Italic"),
+    local("ArialNovaCond-LightItalic"),
+    url("/fonts/arial-nova/ArialNovaCond-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial Nova Cond";
+  src:
+    local("Arial Nova Cond"),
+    local("ArialNovaCond"),
+    url("/fonts/arial-nova/ArialNovaCond.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Nova";
+  src:
+    local("Arial Nova Italic"),
+    local("ArialNova-Italic"),
+    url("/fonts/arial-nova/ArialNova-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial Nova Cond";
+  src:
+    local("Arial Nova Cond Bold"),
+    local("ArialNovaCond-Bold"),
+    url("/fonts/arial-nova/ArialNovaCond-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Nova Cond";
+  src:
+    local("Arial Nova Cond Light"),
+    local("ArialNovaCond-Light"),
+    url("/fonts/arial-nova/ArialNovaCond-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial Nova Cond";
+  src:
+    local("Arial Nova Cond Bold Italic"),
+    local("ArialNovaCond-BoldItalic"),
+    url("/fonts/arial-nova/ArialNovaCond-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
