@@ -1,0 +1,27 @@
+---
+interface HeaderProps {
+  as?: string;
+  class?: string;
+}
+
+const {
+  as = "h2",
+  class: className = "h2",
+  ...rest
+} = Astro.props as HeaderProps;
+
+const Element = as as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+---
+
+<style>
+  .header {
+    margin-bottom: 2rem;
+  }
+</style>
+
+<Element
+  class={`header font-bold tracking-tight text-foreground text-4xl md:text-5xl ${className}`}
+  {...rest}
+>
+  <slot />
+</Element>

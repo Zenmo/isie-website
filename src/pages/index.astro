@@ -2,13 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { siteConfig } from "@/config/site";
 import Hero from "@/components/widgets/Hero.astro";
-import Features from "@/components/widgets/Features.astro";
-import devImg from "@/assets/images/dev_balanced.png";
-import openSourceImg from "@/assets/images/open-source.png";
-import Content2 from "@/components/widgets/Content2.astro";
-import Content from "@/components/widgets/Content.astro";
+import Header from "@/components/ui/Header.astro";
 import Paragraph from "@/components/ui/Paragraph.astro";
-import Card from "@/components/ui/Card.astro";
+import ItemList from "@/components/ui/ItemList.astro";
+
 const metadata = {
   title: `${siteConfig.name}`,
   description:
@@ -43,4 +40,77 @@ const metadata = {
       },
     ]}
   />
+
+  <div class="row">
+    <style>
+      .row {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+      @media (width > 60rem) {
+        .row {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+        .row > * {
+          /* equal width content */
+          flex-basis: 1rem;
+          flex-grow: 1;
+        }
+      }
+    </style>
+    <section style="max-width: 40rem;">
+      <Header>Wat is ISIE</Header>
+      <Paragraph>
+        ISIE (Instrumentarium en Standaarden voor Integrale
+        Energiesysteem-analyse) is een samenwerkingsproject waarin
+        toonaangevende modelleurs werken aan een betere, meer samenhangende
+        analyse van het energiesysteem.
+      </Paragraph>
+    </section>
+    <section style="max-width: 40rem;">
+      <Header>Waarom is dit nodig?</Header>
+      <Paragraph>
+        Analyse van het energiesysteem gebeurt vaak met verschillende modellen,
+        op verschillende schaalniveaus en met uiteenlopende aannames. Hierdoor
+        ontstaan verschillen in uitkomsten en inzichten, en is het lastig om
+        integrale beleidsvragen eenduidig te beantwoorden.
+      </Paragraph>
+      <Paragraph>
+        ISIE pakt dit aan door modellen met elkaar te verbinden en te werken aan
+        gedeelde standaarden.
+      </Paragraph>
+    </section>
+    <section>
+      <Header>Wat doen we?</Header>
+      <ItemList
+        items={[
+          {
+            title: "Modelkoppeling",
+            description:
+              "We verbinden modellen op lokaal, nationaal en Europees niveau.",
+            icon: "lucide:link",
+            iconClass: "bg-indigo-500/10 text-indigo-400",
+          },
+          {
+            title: "Flexibiliteit en infrastructuur",
+            description:
+              "We verbeteren de representatie van flexibiliteit en infrastructuur in modellen.",
+            icon: "lucide:zap",
+            iconClass: "bg-orange-500/10 text-orange-400",
+          },
+          {
+            title: "Standaarden en instrumentarium",
+            description:
+              "We ontwikkelen een gedeeld raamwerk voor consistente analyse.",
+            icon: "lucide:drafting-compass",
+            iconClass: "bg-teal-500/10 text-teal-400",
+          },
+        ]}
+      />
+    </section>
+  </div>
 </BaseLayout>

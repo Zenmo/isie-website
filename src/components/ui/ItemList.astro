@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Feature } from "@/types/types";
+import Paragraph from "@/components/ui/Paragraph.astro";
+
+interface Props {
+  items: Feature[];
+  classes?: Record<string, string>;
+}
+
+const { items = [], classes = {} } = Astro.props;
+const {
+  container: containerClass = "space-y-8 my-8",
+  iconWrapper:
+    iconWrapperClass = "flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary",
+  content: contentClass = "ml-4",
+  title: titleClass = "text-lg font-medium leading-6",
+} = classes;
+---
+
+{
+  items && items.length > 0 && (
+    <div class={containerClass}>
+      {items.map(({ title, description, icon, iconClass }) => (
+        <div class="flex">
+          <div class="shrink-0">
+            <div
+              class={`flex items-center justify-center w-10 h-10 rounded-full ${iconClass ? iconClass : "bg-primary/10 text-primary"}`}
+            >
+              {icon ? (
+                <Icon name={icon} class="w-5 h-5" />
+              ) : (
+                <Icon name="tabler:check" class="w-5 h-5" />
+              )}
+            </div>
+          </div>
+          <div class={contentClass}>
+            {title && <h3 class={titleClass}>{title}</h3>}
+            {description && (
+              <Paragraph class="mt-2 text-muted-foreground">
+                {description}
+              </Paragraph>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
