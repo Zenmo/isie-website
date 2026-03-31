@@ -18,44 +18,29 @@ const metadata = {
 ---
 
 <BaseLayout {metadata}>
-  <Content title="ISIE">
-    <Paragraph>
-      Het project ISIE wordt uitgevoerd in opdracht van Topsector Energie, het
-      door de overheid gefinancierde programma voor onderzoek en innovatie op
-      energiegebied, met financiering via RVO en de KGG-regeling.
-    </Paragraph>
-
-    <Paragraph>
-      Het project is gestart in januari 2026 en heeft een looptijd van anderhalf
-      jaar. Het hoofddoel is om te begrijpen waarom verschillende
-      energiemodellen uiteenlopende antwoorden geven op dezelfde vragen, en deze
-      verschillen met elkaar in lijn te brengen. Dit gebeurt in de context van
-      energiebeleid en -optimalisatie, met een specifieke focus op
-      flexibiliteit, infrastructuur en opslag.
-    </Paragraph>
-
-    <Paragraph>Het project kent drie subdoelstellingen.</Paragraph>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      <Card>
-        Ten eerste wordt er gewerkt aan standaardisatie van data-invoer en de
-        beschrijving van flexibiliteitsmaatregelen, zodat de modellen op een
-        uniforme basis werken.
-      </Card>
-      <Card
-        >Ten tweede wordt er een modelketen opgebouwd waarmee vragen op
-        verschillende schaalniveaus beantwoord kunnen worden;</Card
-      >
-      <Card
-        >Ten derde worden concrete beleidsvragen beantwoord, waaronder de impact
-        van dynamische en nodale prijsstelling, en het effect van verschillende
-        adoptiegraden van flexibiliteit op het energiesysteem.</Card
-      >
-    </div>
-
-    <Paragraph
-      >Aan het project nemen zes bedrijven deel, waarvan er vijf eigen
-      energiesimulatiemmodellen inbrengen.</Paragraph
-    >
-  </Content>
+  <Hero
+    title={`
+      Integrale modellering van het
+      <br class="hidden md:block" />
+      <span class="bg-clip-text text-transparent" style="color: var(--color-primary);">
+          energiesysteem
+      </span>
+    `}
+    description={`${siteConfig.description}`}
+    actions={[
+      {
+        text: "Meer over het project",
+        href: "/over-het-project",
+        variant: "primary",
+        icon: "lucide:notebook-text",
+      },
+      {
+        text: "Resultaten",
+        href: "/publicaties",
+        variant: "secondary",
+        icon: "lucide:chart-spline",
+        ariaLabel: "Learn more about our services",
+      },
+    ]}
+  />
 </BaseLayout>

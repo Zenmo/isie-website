@@ -6,6 +6,11 @@ interface Props {
 const { class: className, ...rest } = Astro.props;
 ---
 
+<style>
+  p {
+    font-weight: lighter;
+  }
+</style>
 <p class:list={["text-muted-foreground text-lg mb-8", className]}>
   <slot />
 </p>

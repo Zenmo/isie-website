@@ -2,7 +2,8 @@ import ogImage from "@/assets/og-image.png";
 
 export const siteConfig = {
   name: "ISIE",
-  description: "Instrumentarium en Standaarden voor Integrale Systeemanalyse.",
+  description:
+    "ISIE ontwikkelt een instrumentarium van energiemodellen om integrale beleidsvragen beter en consistenter te kunnen beantwoorden.",
   url: "https://astrostarterpro.com",
   lang: "en",
   locale: "en_US",
