@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/ui/Header.astro";
+import Content from "@/components/widgets/Content.astro";
+import IconedList from "@/components/ui/IconedList.astro";
+
+const metadata = {
+  title: "Aanpak",
+  description:
+    "ISIE volgt een iteratieve en samenwerkingsgerichte aanpak, waarin modelontwikkeling, standaardisatie en toepassing hand in hand gaan.",
+};
+---
+
+<BaseLayout metadata={metadata}>
+  <Content title={metadata.title} description={metadata.description} />
+
+  <section style="max-width: 40rem; margin: 0 auto; padding: 2rem;">
+    <Header style="text-align: center;">Kernprincipes</Header>
+    <IconedList
+      items={[
+        {
+          title: "Iteratieve ontwikkeling",
+          description:
+            "We werken in sprints, waarin we modellen, data en analyses stapsgewijs ontwikkelen en verbeteren.",
+          icon: "lucide:refresh-ccw",
+          iconClass: "bg-indigo-500/10 text-indigo-400",
+        },
+        {
+          title: "Samenwerking in consortium",
+          description:
+            "Het consortium brengt verschillende modellen en expertises samen, van lokale flexibiliteit tot Europese systeemanalyse.",
+          icon: "lucide:users",
+          iconClass: "bg-orange-500/10 text-orange-400",
+        },
+        {
+          title: "Gebruikers centraal",
+          description:
+            "Via klankbordgroepen worden gebruikers actief betrokken, zodat de resultaten aansluiten bij de praktijk.",
+          icon: "lucide:brain",
+          iconClass: "bg-teal-500/10 text-teal-400",
+        },
+        {
+          title: "Modelkoppeling",
+          description:
+            "We ontwikkelen standaarden en interfaces waarmee modellen data en inzichten kunnen uitwisselen.",
+          icon: "lucide:link",
+          iconClass: "bg-purple-500/10 text-purple-400",
+        },
+      ]}
+    />
+  </section>
+</BaseLayout>
