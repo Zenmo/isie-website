@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/ui/Header.astro";
+import Content from "@/components/widgets/Content.astro";
+import IconedList from "@/components/ui/IconedList.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
+import BulletList from "@/components/ui/BulletList.astro";
+
+const metadata = {
+  title: "Instrumentarium",
+  description:
+    "Het ISIE-instrumentarium bestaat uit een samenhangend geheel van modellen, datasets, " +
+    "tools en standaarden waarmee integrale energiesysteemanalyse mogelijk wordt gemaakt.",
+};
+---
+
+<BaseLayout metadata={metadata}>
+  <Content title={metadata.title} description={metadata.description} />
+
+  <section style="max-width: 40rem; margin: 0 auto; padding: 2rem;">
+    <Paragraph>
+      In plaats van één nieuw model te ontwikkelen, richt ISIE zich op het
+      verbinden van bestaande modellen. Zo ontstaat een flexibel en uitbreidbaar
+      systeem waarin verschillende modellen kunnen samenwerken.
+    </Paragraph>
+
+    <Paragraph>Het instrumentarium omvat onder andere:</Paragraph>
+
+    <BulletList>
+      <li>modelstandaarden</li>
+      <li>datamodellen en uitwisselformaten</li>
+      <li>koppelingen tussen modellen</li>
+      <li>workflows voor integrale analyse</li>
+    </BulletList>
+
+    <Paragraph>
+      Op dit moment zijn de volgende modellen onderdeel van het te ontwikkelen
+      instrumentarium
+    </Paragraph>
+
+    <Paragraph> [Model naam | Organisatie] </Paragraph>
+
+    <Paragraph> [Toelichting model en sterke punten] </Paragraph>
+  </section>
+</BaseLayout>
