@@ -1,0 +1,81 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Content from "@/components/widgets/Content.astro";
+import Header from "@/components/ui/Header.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
+import BulletList from "@/components/ui/BulletList.astro";
+
+const metadata = {
+  title: "Over ISIE",
+  description: "Omschrijving van het project ISIE.",
+};
+---
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(20rem, 40rem);
+    place-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    gap: 3rem;
+  }
+
+  @media (min-width: 48rem) {
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(20rem, 40rem) minmax(20rem, 40rem);
+    }
+  }
+</style>
+
+<BaseLayout metadata={metadata}>
+  <Content title="Over het project" />
+
+  <div class="grid">
+    <section>
+      <Header>Introductie</Header>
+
+      <Paragraph>
+        ISIE is een meerjarig project in opdracht van Topsector Energie en RVO.
+        Het project richt zich op het verbeteren van de manier waarop
+        energiesysteemanalyse wordt uitgevoerd en toegepast in beleid en
+        praktijk.
+      </Paragraph>
+    </section>
+
+    <section>
+      <Header>Doel</Header>
+
+      <Paragraph>
+        Het doel van ISIE is om een samenhangend instrumentarium te ontwikkelen
+        waarmee het energiesysteem integraal kan worden geanalyseerd, over
+        verschillende sectoren, energiedragers en schaalniveaus heen.
+      </Paragraph>
+    </section>
+
+    <section>
+      <Header>Focus</Header>
+
+      <Paragraph>Binnen ISIE ligt de nadruk op:</Paragraph>
+
+      <BulletList>
+        <li>de samenhang tussen flexibiliteit en infrastructuur</li>
+        <li>koppeling van modellen op verschillende schaalniveaus</li>
+        <li>transparantie en reproduceerbaarheid van analyses</li>
+        <li>
+          bruikbaarheid van resultaten voor beleidsmakers en andere gebruikers
+        </li>
+      </BulletList>
+    </section>
+
+    <section>
+      <Header>Looptijd en opdrachtgever</Header>
+
+      <Paragraph>
+        Het project loopt tot medio 2027 en wordt uitgevoerd in opdracht van
+        Topsector Energie, in samenwerking met RVO.
+      </Paragraph>
+    </section>
+  </div>
+</BaseLayout>

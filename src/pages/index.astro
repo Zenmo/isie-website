@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 import Hero from "@/components/widgets/Hero.astro";
 import Header from "@/components/ui/Header.astro";
 import Paragraph from "@/components/ui/Paragraph.astro";
-import ItemList from "@/components/ui/ItemList.astro";
+import IconedList from "@/components/ui/IconedList.astro";
 
 const metadata = {
   title: `${siteConfig.name}`,
@@ -59,10 +59,11 @@ const metadata = {
           /* equal width content */
           flex-basis: 1rem;
           flex-grow: 1;
+          max-width: 40rem;
         }
       }
     </style>
-    <section style="max-width: 40rem;">
+    <section>
       <Header>Wat is ISIE</Header>
       <Paragraph>
         ISIE (Instrumentarium en Standaarden voor Integrale
@@ -71,7 +72,7 @@ const metadata = {
         analyse van het energiesysteem.
       </Paragraph>
     </section>
-    <section style="max-width: 40rem;">
+    <section>
       <Header>Waarom is dit nodig?</Header>
       <Paragraph>
         Analyse van het energiesysteem gebeurt vaak met verschillende modellen,
@@ -86,7 +87,7 @@ const metadata = {
     </section>
     <section>
       <Header>Wat doen we?</Header>
-      <ItemList
+      <IconedList
         items={[
           {
             title: "Modelkoppeling",
