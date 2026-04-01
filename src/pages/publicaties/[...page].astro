@@ -5,6 +5,7 @@ import Headline from "@/components/ui/Headline.astro";
 import Pagination from "@/components/ui/Pagination.astro";
 import PublicationItem from "@/components/publications/PublicationItem.astro";
 import type { GetStaticPathsOptions } from "astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const publicationEntries = await getCollection("publications");
@@ -34,9 +35,7 @@ const metadata = {
     </div>
     <div class="relative mx-auto max-w-5xl">
       <Headline
-        tagline="Publicaties"
         title="Onze Publicaties"
-        subtitle="Download rapporten, presentaties en andere documenten van het ISIE project."
         classes={{
           container: "reveal mb-12 text-center",
           title:
@@ -44,6 +43,16 @@ const metadata = {
           subtitle: "mx-auto max-w-3xl text-xl text-muted-foreground",
         }}
       />
+      <section style="max-width: 40rem; margin: 0 auto; padding: 2rem;">
+        <Paragraph>
+          Op deze pagina worden de resultaten van het ISIE-project gedeeld,
+          waaronder rapporten, werkdocumenten en technische documentatie.
+        </Paragraph>
+        <Paragraph>
+          Alle publicaties worden openbaar beschikbaar gesteld om transparantie
+          en hergebruik te bevorderen.
+        </Paragraph>
+      </section>
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {publications.map((pub) => <PublicationItem publication={pub} />)}
