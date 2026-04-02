@@ -4,6 +4,8 @@ import Features from "@/components/widgets/Features.astro";
 import Content from "@/components/widgets/Content.astro";
 import Form from "@/components/ui/Form.astro";
 import Paragraph from "@/components/ui/Paragraph.astro";
+import CompanyCard from "@/components/ui/CompanyCard.astro";
+import InlineLink from "@/components/ui/InlineLink.astro";
 
 const metadata = {
   title: "Consortium",
@@ -12,7 +14,7 @@ const metadata = {
 ---
 
 <BaseLayout {metadata}>
-  <Content title="Consortium" description={metadata.description} />
+  <Content title="Consortium" />
   <section style="max-width: 40rem; margin: 0 auto; padding: 2rem;">
     <Paragraph>
       ISIE wordt uitgevoerd door een consortium van zes organisaties met
@@ -24,53 +26,85 @@ const metadata = {
       variërend van lokale flexibiliteit tot analyse op Europees niveau.
     </Paragraph>
   </section>
+
   <style>
-    .logos {
-      --item-width: 20rem;
-      display: flex;
-      flex-direction: row;
+    .company-grid {
+      display: grid;
+      align-items: stretch;
       justify-content: center;
-      align-items: center;
-      gap: 3.5rem;
-      flex-wrap: wrap;
-      max-width: calc(3 * var(--item-width) + 2 * 4rem);
+      gap: 2rem;
+      padding: 0 3rem;
+      grid-template-columns: minmax(20rem, 30rem);
+      grid-template-rows: repeat(6, 1fr);
     }
-    .logos > * {
-      width: var(--item-width);
-      height: 12rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    /* md */
+    @media (width >= 48rem) {
+      .company-grid {
+        grid-template-columns: repeat(2, minmax(20rem, 30rem));
+        grid-template-rows: repeat(3, 1fr);
+      }
+    }
+    /* xl */
+    @media (width >= 80rem) {
+      .company-grid {
+        grid-template-columns: repeat(3, minmax(20rem, 30rem));
+        grid-template-rows: repeat(2, 1fr);
+      }
     }
   </style>
-  <div
-    style="display: flex; justify-content: center; align-items: center; padding-left: 5rem; padding-right: 5rem;"
-  >
-    <div class="logos">
-      <a href="https://commonfutures.nl/" target="_blank">
-        <img src="/consortium-logos/common-futures.svg" alt="Common Futures" />
-      </a>
-      <a href="https://www.ce-delft.nl/" target="_blank">
-        <img src="/consortium-logos/ce-delft.png" alt="CE Delft" />
-      </a>
-      <a href="https://openenergytransition.org/" target="_blank">
-        <img
-          src="/consortium-logos/open-energy-transition.png"
-          alt="Open Energy Transition"
-        />
-      </a>
-      <a href="https://resourcefully.nl/" target="_blank">
-        <img
-          src="/consortium-logos/resourcefully-light-mode.svg"
-          alt="Resourcefully"
-        />
-      </a>
-      <a href="https://zenmo.com" target="_blank">
-        <img src="/consortium-logos/zenmo.png" alt="Zenmo" />
-      </a>
-      <a href="https://www.tue.nl/" target="_blank">
-        <img src="/consortium-logos/tue.svg" alt="TU Eindhoven" />
-      </a>
-    </div>
+
+  <div class="company-grid">
+    <CompanyCard
+      company="Common Futures"
+      href="https://commonfutures.nl/"
+      image="/consortium-logos/common-futures.svg"
+    >
+      <Paragraph> Common Futures. </Paragraph>
+    </CompanyCard>
+
+    <CompanyCard
+      company="Zenmo"
+      image="/consortium-logos/zenmo.svg"
+      href="https://zenmo.com"
+    >
+      <Paragraph>
+        Zenmo is gespecialiseerd in agent-based simulatiemodellen. Het is de
+        ontwikkelaar achter de open source tool <InlineLink
+          href="https://lux.energy">LUX Energy Twin</InlineLink
+        >.
+      </Paragraph>
+    </CompanyCard>
+
+    <CompanyCard
+      company="CE Delft"
+      href="https://www.ce-delft.nl/"
+      image="/consortium-logos/ce-delft.png"
+    >
+      <Paragraph> CE Delft. </Paragraph>
+    </CompanyCard>
+
+    <CompanyCard
+      company="Open Energy Transition"
+      href="https://openenergytransition.org/"
+      image="/consortium-logos/open-energy-transition.png"
+    >
+      <Paragraph> Open Energy Transition. </Paragraph>
+    </CompanyCard>
+
+    <CompanyCard
+      company="Resourcefully"
+      href="https://resourcefully.nl/"
+      image="/consortium-logos/resourcefully-light-mode.svg"
+    >
+      <Paragraph> Resourcefully. </Paragraph>
+    </CompanyCard>
+
+    <CompanyCard
+      company="TU Eindhoven"
+      href="https://www.tue.nl/"
+      image="/consortium-logos/tue.svg"
+    >
+      <Paragraph> TU Eindhoven. </Paragraph>
+    </CompanyCard>
   </div>
 </BaseLayout>

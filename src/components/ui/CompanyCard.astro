@@ -1,0 +1,32 @@
+---
+export interface Props {
+  company: string;
+  image: string;
+  href: string;
+}
+
+const { company, image, href } = Astro.props;
+---
+
+<div
+  class="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+>
+  <a href={href} class="relative h-32 w-full overflow-hidden">
+    <img
+      src={image}
+      alt={`${company} logo`}
+      class="transition-transform duration-300 group-hover:scale-105"
+      style="
+          height: 100%;
+          object-fit: scale-down;
+          padding: 1rem;
+          padding-top: 2rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+      "
+    />
+  </a>
+  <div class="flex flex-1 flex-col p-6">
+    <slot />
+  </div>
+</div>

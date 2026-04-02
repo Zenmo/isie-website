@@ -73,7 +73,7 @@ const { publication } = Astro.props;
       <div class="flex space-x-1 text-sm text-muted-foreground">
         <time datetime={publication.data.pubDate.toISOString()}>
           {
-            publication.data.pubDate.toLocaleDateString("en-US", {
+            publication.data.pubDate.toLocaleDateString("nl-NL", {
               year: "numeric",
               month: "long",
               day: "numeric",
