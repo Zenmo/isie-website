@@ -4,16 +4,15 @@ export const siteConfig = {
   name: "ISIE",
   description:
     "ISIE ontwikkelt een instrumentarium van energiemodellen om integrale beleidsvragen beter en consistenter te kunnen beantwoorden.",
-  url: "https://astrostarterpro.com",
-  lang: "en",
-  locale: "en_US",
-  author: "Devgelo",
-  twitter: "@Devgelo",
+  url: "https://isie.energy",
+  lang: "nl",
+  locale: "nl_NL",
+  author: "Common Futures en Zenmo",
+  twitter: "@AukeHoekstra",
   ogImage: ogImage,
   socialLinks: {
-    twitter: "https://twitter.com",
-    github: "https://github.com/devgelo-labs/astro-starter-pro",
-    discord: "https://discord.com",
+    twitter: "https://x.com/AukeHoekstra",
+    github: "https://github.com/Zenmo/isie-website",
   },
   navLinks: [
     { text: "Home", href: "/" },
