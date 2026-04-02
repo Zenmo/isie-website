@@ -34,7 +34,10 @@ const { container: containerClassProp = "", ...otherClasses } = classes;
       container: "max-w-3xl mx-auto text-center",
     }}
   />
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div
+    class="grid grid-cols-1 gap-8"
+    style="justify-content: center; grid-template-columns: minmax(10rem, 20rem);"
+  >
     {
       features.map((feature) => (
         <Card>
