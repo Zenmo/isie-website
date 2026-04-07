@@ -5,6 +5,9 @@ import Content from "@/components/widgets/Content.astro";
 import IconedList from "@/components/ui/IconedList.astro";
 import Paragraph from "@/components/ui/Paragraph.astro";
 import BulletList from "@/components/ui/BulletList.astro";
+import ContentWithImage from "@/components/ui/ContentWithImage.astro";
+import Headline from "@/components/ui/Headline.astro";
+import IntroParagraph from "@/components/ui/IntroParagraph.astro";
 
 const metadata = {
   title: "Instrumentarium",
@@ -37,9 +40,41 @@ const metadata = {
       Op dit moment zijn de volgende modellen onderdeel van het te ontwikkelen
       instrumentarium
     </Paragraph>
-
-    <Paragraph> [Model naam | Organisatie] </Paragraph>
-
-    <Paragraph> [Toelichting model en sterke punten] </Paragraph>
   </section>
+
+  <ContentWithImage
+    image="/lux-screenshot.png"
+    imageAlt="Screenshot van het LUX dashboard"
+  >
+    <Headline tagline="Zenmo" title="LUX Energy Twin" />
+    <Paragraph>
+      Dit simulatiemodel werkt agent-based. Het ondersteunt meerdere
+      energiedragers. Sterke punten:
+    </Paragraph>
+
+    <IconedList
+      classes={{ container: "space-y-0" }}
+      items={[
+        {
+          title: "Verkenning",
+          description: "Scenario's samenstellen en direct feedback ontvangen.",
+          icon: "lucide:play",
+          iconClass: "bg-indigo-500/10 text-indigo-400",
+        },
+        {
+          title: "Performance",
+          description: "Duizenden actoren met hoge tijdsresolutie.",
+          icon: "lucide:zap",
+          iconClass: "bg-orange-500/10 text-orange-400",
+        },
+        {
+          title: "Nettopologie",
+          description:
+            "Verken oplossingen voor netcongestie door lokaal samen te werken.",
+          icon: "lucide:git-pull-request-arrow",
+          iconClass: "bg-teal-500/10 text-teal-400",
+        },
+      ]}
+    />
+  </ContentWithImage>
 </BaseLayout>

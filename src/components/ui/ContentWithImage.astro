@@ -1,0 +1,42 @@
+---
+import type { HTMLAttributes } from "astro/types";
+type Props = {
+  image: string;
+  imageAlt: string;
+} & HTMLAttributes<"div">;
+
+const { image, imageAlt } = Astro.props as Props;
+---
+
+<style>
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  /* md */
+  @media (width >= 48rem) {
+    .row {
+      flex-direction: row;
+    }
+    .row > * {
+      width: 50%;
+      max-width: 40rem;
+    }
+  }
+</style>
+
+<div class="row">
+  <div>
+    <img
+      src={image}
+      alt={imageAlt}
+      class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+    />
+  </div>
+  <div>
+    <slot />
+  </div>
+</div>
