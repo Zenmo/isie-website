@@ -1,5 +1,7 @@
 ---
 import type { HeadlineProps } from "@/types/types";
+import Paragraph from "@/components/ui/Paragraph.astro";
+import IntroParagraph from "@/components/ui/IntroParagraph.astro";
 
 const {
   title = await Astro.slots.render("title"),
@@ -35,12 +37,7 @@ const Title = titleAs as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
           set:html={title}
         />
       )}
-      {subtitle && (
-        <p
-          class={`text-muted-foreground ${subtitleClass}`}
-          set:html={subtitle}
-        />
-      )}
+      {subtitle && <IntroParagraph class={subtitleClass} set:html={subtitle} />}
     </div>
   )
 }

@@ -13,6 +13,9 @@
 
 :root {
   --isie-deep-red: #c00000;
+  --isie-deep-blue: #001b50;
+
+  /* colors of the logo */
   --isie-red: #c55e5e;
   --isie-yellow: #e7cf61;
   --isie-blue: #5ebbe0;

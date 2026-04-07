@@ -1,0 +1,16 @@
+---
+import Props from "./Paragraph.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<style>
+  p {
+    color: var(--isie-deep-blue);
+    font-size: 1.25rem;
+  }
+</style>
+<Paragraph {...rest}>
+  <slot />
+</Paragraph>
