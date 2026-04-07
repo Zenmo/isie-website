@@ -42,39 +42,76 @@ const metadata = {
     </Paragraph>
   </section>
 
-  <ContentWithImage
-    image="/lux-screenshot.png"
-    imageAlt="Screenshot van het LUX dashboard"
-  >
-    <Headline tagline="Zenmo" title="LUX Energy Twin" />
-    <Paragraph>
-      Dit simulatiemodel werkt agent-based. Het ondersteunt meerdere
-      energiedragers. Sterke punten:
-    </Paragraph>
+  <div style="display: flex; gap: 2rem; flex-direction: column;">
+    <ContentWithImage
+      image="/lux-screenshot.png"
+      imageAlt="Screenshot van het LUX dashboard"
+    >
+      <Headline tagline="Zenmo" title="LUX Energy Twin" />
+      <Paragraph>
+        Dit simulatiemodel werkt agent-based. Het ondersteunt meerdere
+        energiedragers. Sterke punten:
+      </Paragraph>
 
-    <IconedList
-      classes={{ container: "space-y-0" }}
-      items={[
-        {
-          title: "Verkenning",
-          description: "Scenario's samenstellen en direct feedback ontvangen.",
-          icon: "lucide:play",
-          iconClass: "bg-indigo-500/10 text-indigo-400",
-        },
-        {
-          title: "Performance",
-          description: "Duizenden actoren met hoge tijdsresolutie.",
-          icon: "lucide:zap",
-          iconClass: "bg-orange-500/10 text-orange-400",
-        },
-        {
-          title: "Nettopologie",
-          description:
-            "Verken oplossingen voor netcongestie door lokaal samen te werken.",
-          icon: "lucide:git-pull-request-arrow",
-          iconClass: "bg-teal-500/10 text-teal-400",
-        },
-      ]}
-    />
-  </ContentWithImage>
+      <IconedList
+        classes={{ container: "space-y-0" }}
+        items={[
+          {
+            title: "Verkenning",
+            description: "Stel scenario's samen en krijg direct feedback.",
+            icon: "lucide:play",
+            iconClass: "bg-indigo-500/10 text-indigo-400",
+          },
+          {
+            title: "Performance",
+            description: "Duizenden actoren met hoge tijdsresolutie.",
+            icon: "lucide:zap",
+            iconClass: "bg-orange-500/10 text-orange-400",
+          },
+          {
+            title: "Nettopologie",
+            description:
+              "Verken oplossingen voor netcongestie door lokaal samen te werken.",
+            icon: "lucide:git-pull-request-arrow",
+            iconClass: "bg-teal-500/10 text-teal-400",
+          },
+        ]}
+      />
+    </ContentWithImage>
+
+    <ContentWithImage
+      image="/resourcefully-screenshot.png"
+      imageAlt="Screenshot van het dashboard voor De Binnenhaven"
+      style="--flex-direction: row-reverse"
+    >
+      <Headline tagline="Resourcefully" title="FLEX+" />
+      <Paragraph>Sterke punten: </Paragraph>
+
+      <IconedList
+        classes={{ container: "space-y-0" }}
+        items={[
+          {
+            title: "Batterijen en flex",
+            description:
+              "Bereken de optimale strategie voor de inzet van batterijen en slim laden.",
+            icon: "lucide:ev-charger",
+            iconClass: "bg-indigo-500/10 text-indigo-400",
+          },
+          {
+            title: "Dashboard",
+            description:
+              "Uitgebreid dashboard om de uitkomsten van scenario's te vergelijken.",
+            icon: "lucide:trending-up-down",
+            iconClass: "bg-orange-500/10 text-orange-400",
+          },
+          {
+            title: "Gevoeligheidsanalyse",
+            description: "Bereken de impact van veranderende omstandigheden.",
+            icon: "lucide:chart-candlestick",
+            iconClass: "bg-teal-500/10 text-teal-400",
+          },
+        ]}
+      />
+    </ContentWithImage>
+  </div>
 </BaseLayout>
