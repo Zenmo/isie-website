@@ -1,4 +1,4 @@
-import ogImage from "@/assets/og-image.png";
+import ogImage from "@/assets/open-graph-image.png";
 
 export const siteConfig = {
   name: "ISIE",
