@@ -3,6 +3,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Features from "@/components/widgets/Features.astro";
 import Content from "@/components/widgets/Content.astro";
 import Form from "@/components/ui/Form.astro";
+import { Icon } from "astro-icon/components";
+import Card from "@/components/ui/Card.astro";
+import IntroParagraph from "@/components/ui/IntroParagraph.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
 
 const metadata = {
   title: "Contact",
@@ -12,14 +16,26 @@ const metadata = {
 
 <BaseLayout {metadata}>
   <Content title={metadata.title} />
+  <IntroParagraph style="text-align: center;">
+    Onderstaande contactpersonen helpen u graag verder als u vragen heeft over
+    het project.
+  </IntroParagraph>
   <Features
     classes={{ container: "pt-0 md:pt-0" }}
     features={[
       {
-        title: "Email",
-        description: "contact@company.com",
+        title: "Lisanne Havinga",
+        description:
+          "<a href='mailto:lisanne.havinga@commonfutures.com'>lisanne.havinga@commonfutures.com</a>",
         icon: "lucide:mail",
         iconClass: "bg-yellow-500/10 text-yellow-400",
+      },
+      {
+        title: "Kees van der Leun",
+        description:
+          "<a href='mailto:kees.vanderleun@commonfutures.com'>kees.vanderleun@commonfutures.com</a>",
+        icon: "lucide:mail",
+        iconClass: "bg-blue-500/10 text-blue-400",
       },
     ]}
   />
