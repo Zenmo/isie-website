@@ -1,5 +1,7 @@
 ---
+import type { HTMLAttributes } from "astro/types";
 
+type Props = HTMLAttributes<"ul">;
 ---
 
 <style>
@@ -13,6 +15,6 @@
   }
 </style>
 
-<ul>
+<ul {...Astro.props}>
   <slot />
 </ul>
