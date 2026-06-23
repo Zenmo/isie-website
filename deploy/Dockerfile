@@ -16,7 +16,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve the site
-FROM lipanski/docker-static-website:latest
+FROM docker.io/lipanski/docker-static-website:latest
 
 # Copy built site from builder stage
 # Astro by default builds to the 'dist' folder

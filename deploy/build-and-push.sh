@@ -9,14 +9,14 @@ cd $(dirname "$0")
 IMAGE_NAME="ghcr.io/zenmo/isie-website:latest"
 
 # Build the Docker image
-echo "Building Docker image: $IMAGE_NAME..."
-docker build \
+echo "Building container image: $IMAGE_NAME..."
+podman build \
     --file Dockerfile \
     --tag "$IMAGE_NAME" \
     ..
 
 # Push the Docker image
-echo "Pushing Docker image: $IMAGE_NAME..."
-docker push "$IMAGE_NAME"
+echo "Pushing container image: $IMAGE_NAME..."
+podman push "$IMAGE_NAME"
 
 echo "Done!"
