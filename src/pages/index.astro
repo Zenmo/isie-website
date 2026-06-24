@@ -61,8 +61,11 @@ const metadata = {
           max-width: 40rem;
         }
       }
+      .home-section {
+        padding-bottom: 1rem;
+      }
     </style>
-    <section>
+    <section class="home-section">
       <Header>Wat is ISIE</Header>
       <Paragraph>
         ISIE (Instrumentarium en Standaarden voor Integrale
@@ -70,8 +73,13 @@ const metadata = {
         toonaangevende modelleurs werken aan een betere, meer samenhangende
         analyse van het energiesysteem.
       </Paragraph>
+      <Paragraph>
+        We verbinden modellering van lokale flexibiliteitsopties en de
+        aansturing daarvan met modellering van het nationale en internationale
+        energiesysteem.
+      </Paragraph>
     </section>
-    <section>
+    <section class="home-section">
       <Header>Waarom is dit nodig?</Header>
       <Paragraph>
         Analyse van het energiesysteem gebeurt vaak met verschillende modellen,
@@ -84,7 +92,7 @@ const metadata = {
         gedeelde standaarden.
       </Paragraph>
     </section>
-    <section>
+    <section class="home-section">
       <Header>Wat doen we?</Header>
       <IconedList
         items={[
