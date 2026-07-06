@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 import { Icon } from "astro-icon/components";
 ---
 
-<footer class="mt-20 border-t border-border bg-card">
+<footer class="mt-20 border-t border-b border-border bg-card mb-16">
   <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
       <div class="flex flex-col items-center gap-2 md:items-start">
@@ -33,21 +33,6 @@ import { Icon } from "astro-icon/components";
           />
         </a>
       </div>
-    </div>
-    <div
-      class="mt-8 border-t border-border pt-8 text-center text-xs text-muted-foreground"
-    >
-      <a href="https://github.com/Zenmo/isie-website">
-        <Icon
-          name="lucide:code-xml"
-          style=`
-            display: inline;
-            width: 1.2rem;
-            height: 1.2rem;
-            color: var(--primary);
-          `
-        />
-      </a>
     </div>
   </div>
 </footer>

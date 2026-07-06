@@ -8,6 +8,7 @@ import Card from "@/components/ui/Card.astro";
 import IntroParagraph from "@/components/ui/IntroParagraph.astro";
 import Paragraph from "@/components/ui/Paragraph.astro";
 import Header from "@/components/ui/Header.astro";
+import InlineLink from "@/components/ui/InlineLink.astro";
 
 const metadata = {
   title: "Contact",
@@ -44,6 +45,12 @@ const metadata = {
       },
     ]}
   />
-  <Header>Colophon</Header>
-  <Paragraph>De be</Paragraph>
+  <Header style="text-align: center">Colofon</Header>
+  <Paragraph style="text-align: center">
+    De redactie van deze site is gedaan door Common Futures.
+  </Paragraph>
+  <Paragraph style="text-align: center">
+    De broncode is te vinden op
+    <InlineLink href="https://github.com/Zenmo/isie-website" />
+  </Paragraph>
 </BaseLayout>
