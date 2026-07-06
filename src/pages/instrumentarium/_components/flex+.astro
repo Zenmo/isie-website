@@ -1,0 +1,48 @@
+---
+import ContentWithImage from "@/components/ui/ContentWithImage.astro";
+import Headline from "@/components/ui/Headline.astro";
+import IconedList from "@/components/ui/IconedList.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
+---
+
+<ContentWithImage
+  image="/resourcefully-screenshot.png"
+  imageAlt="Screenshot van het dashboard voor De Binnenhaven"
+  style="--flex-direction: row-reverse"
+>
+  <Headline tagline="Resourcefully" title="FLEX+ Energiesimulatie Tool" />
+
+  <Paragraph>
+    Integrale energietool voor gebouw, hub of wijk-niveau scenarioanalyses en
+    inzichten in impact van flexibiliteit.
+  </Paragraph>
+
+  <Paragraph>Sterke punten: </Paragraph>
+
+  <IconedList
+    classes={{ container: "space-y-0" }}
+    items={[
+      {
+        title: "Batterijen en flex",
+        description:
+          "Bereken de optimale vorm en impact voor de inzet van batterijen en slim laden van EV's.",
+        icon: "lucide:ev-charger",
+        iconClass: "bg-indigo-500/10 text-indigo-400",
+      },
+      {
+        title: "Custom EV model",
+        description:
+          "Stel je eigen EV-laadprofielen op of maak gebruik van onze profielen op basis van miljoenen laadsessies.",
+        icon: "lucide:chart-candlestick",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+      {
+        title: "Dashboard",
+        description:
+          "Uitgebreid dashboard om de uitkomsten van scenario's te vergelijken.",
+        icon: "lucide:trending-up-down",
+        iconClass: "bg-orange-500/10 text-orange-400",
+      },
+    ]}
+  />
+</ContentWithImage>

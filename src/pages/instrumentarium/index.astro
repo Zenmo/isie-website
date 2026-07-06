@@ -1,0 +1,58 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/ui/Header.astro";
+import Content from "@/components/widgets/Content.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
+import BulletList from "@/components/ui/BulletList.astro";
+import IntroParagraph from "@/components/ui/IntroParagraph.astro";
+import Lux from "@/pages/instrumentarium/_components/lux.astro";
+import FlexPlus from "@/pages/instrumentarium/_components/flex+.astro";
+import CEnergie from "@/pages/instrumentarium/_components/cenergie.astro";
+import DOTSEnergy from "@/pages/instrumentarium/_components/dots-energy.astro";
+import PyPSANL from "@/pages/instrumentarium/_components/pypsa-nl.astro";
+
+const metadata = {
+  title: "Instrumentarium",
+  description:
+    "Het ISIE-instrumentarium bestaat uit een samenhangend geheel van modellen, datasets, " +
+    "tools en standaarden waarmee integrale energiesysteemanalyse mogelijk wordt gemaakt.",
+};
+---
+
+<BaseLayout metadata={metadata}>
+  <Content title={metadata.title} description={metadata.description} />
+
+  <section style="max-width: 40rem; margin: 0 auto; padding: 2rem;">
+    <Paragraph>
+      In plaats van één nieuw model te ontwikkelen, richt ISIE zich op het
+      verbinden van bestaande modellen. Zo ontstaat een flexibel en uitbreidbaar
+      systeem waarin verschillende modellen kunnen samenwerken.
+    </Paragraph>
+
+    <Paragraph>Het instrumentarium omvat onder andere:</Paragraph>
+
+    <BulletList>
+      <li>modelstandaarden</li>
+      <li>datamodellen en uitwisselformaten</li>
+      <li>koppelingen tussen modellen</li>
+      <li>workflows voor integrale analyse</li>
+    </BulletList>
+  </section>
+
+  <section style="padding: 2rem;">
+    <Header style="text-align: center;">Simulatiemodellen</Header>
+
+    <IntroParagraph style="text-align: center;">
+      Onderstaande modellen worden onderdeel van het te ontwikkelen
+      instrumentarium
+    </IntroParagraph>
+  </section>
+
+  <div style="display: flex; gap: 2rem; flex-direction: column;">
+    <Lux />
+    <FlexPlus />
+    <CEnergie />
+    <DOTSEnergy />
+    <PyPSANL />
+  </div>
+</BaseLayout>

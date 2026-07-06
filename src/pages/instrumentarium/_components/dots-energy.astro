@@ -1,0 +1,53 @@
+---
+import ContentWithImage from "@/components/ui/ContentWithImage.astro";
+import Headline from "@/components/ui/Headline.astro";
+import IconedList from "@/components/ui/IconedList.astro";
+import Paragraph from "@/components/ui/Paragraph.astro";
+---
+
+<ContentWithImage
+  image="/dots-energy-visual.png"
+  imageAlt="Visualisatie van het DOTS-Energy platform"
+  style="--flex-direction: row-reverse"
+>
+  <Headline tagline="TU Eindhoven" title="DOTS-Energy" />
+
+  <Paragraph>
+    DOTS-Energy (Distributed Orchestrated Time Simulation) is een open-source
+    co-simulatieplatform, ontwikkeld voor het modelleren van energiesystemen die
+    bestaan uit verschillende energiecomponenten (productie, consumptie,
+    conversie, opslag, transport) beschreven met behulp van <a
+      href="https://energytransition.gitbook.io/esdl/"
+      class="underline text-primary">ESDL</a
+    >.
+  </Paragraph>
+
+  <Paragraph>Sterke punten:</Paragraph>
+
+  <IconedList
+    classes={{ container: "space-y-0" }}
+    items={[
+      {
+        title: "Open-Source",
+        description:
+          'Volledig open-source beschikbaar: Code op <a href="https://github.com/dots-energy" class="underline text-primary">https://github.com/dots-energy</a> en documentatie op <a href="https://dots-simulation-orchestrator.readthedocs.io/" class="underline text-primary">https://dots-simulation-orchestrator.readthedocs.io/</a>',
+        icon: "lucide:code-xml",
+        iconClass: "bg-indigo-500/10 text-indigo-400",
+      },
+      {
+        title: "Schaalbaarheid",
+        description:
+          "Modulaire architectuur waarmee onderzoekers hun eigen modellen kunnen aansluiten en gebruiken, met eenvoudige scenario-definities en implementatiestrategieën.",
+        icon: "lucide:maximize",
+        iconClass: "bg-teal-500/10 text-teal-400",
+      },
+      {
+        title: "Congestie management studies",
+        description:
+          "Open-source modellen voor flexibiliteits- en congestie management studies in distributie netwerken.",
+        icon: "lucide:traffic-cone",
+        iconClass: "bg-orange-500/10 text-orange-400",
+      },
+    ]}
+  />
+</ContentWithImage>
