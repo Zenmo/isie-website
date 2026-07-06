@@ -1,0 +1,29 @@
+---
+import InlineLink from "@/components/ui/InlineLink.astro";
+import { Icon } from "astro-icon/components";
+import Paragraph from "@/components/ui/Paragraph.astro";
+
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+
+const label = href.replace("https://", "");
+---
+
+<style>
+  .AlignIcon {
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+</style>
+
+<Paragraph>
+  Meer op
+  <InlineLink href={href} class="AlignIcon">
+    {label}
+    <Icon name="lucide:external-link" style="display: inline-block" />
+  </InlineLink>
+</Paragraph>

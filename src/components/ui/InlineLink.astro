@@ -1,15 +1,24 @@
 ---
-export interface Props {
-  href: string;
-}
+import type { HTMLAttributes } from "astro/types";
 
-const { href } = Astro.props;
+export type Props = HTMLAttributes<"a"> & { href: string };
+
+const href = Astro.props.href;
+
+const fallbackLabel = href
+  .toString()
+  .replace("https://", "")
+  .replace(/\/$/, "");
 ---
 
 <style>
   a {
-    color: var(--isie-red);
+    color: var(--isie-deep-red);
     border-bottom: 1px solid var(--isie-red);
+    font-weight: lighter;
   }
 </style>
-<a href={href}><slot /></a>
+
+<a {...Astro.props}>
+  <slot>fallbackLabel</slot>
+</a>
